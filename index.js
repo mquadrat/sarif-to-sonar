@@ -39,6 +39,7 @@ try {
     }
     
     // Save the output file 
+    const content = JSON.stringify({ issues: sonarIssues});
     fs.writeFileSync(core.getInput('sonar-file'), content);
 
 

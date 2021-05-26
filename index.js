@@ -41,8 +41,8 @@ try {
                 textRange: {
                     startLine: location.region.startLine, 
                     endLine: location.region.endLine, 
-                    startColumn: location.region.startColumn, 
-                    endColumn: location.region.endColumn-1  
+                    startColumn: startColumn, 
+                    endColumn: endColumn  
                 }
             }
         }

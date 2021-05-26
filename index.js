@@ -15,6 +15,12 @@ try {
     for (const result of data.runs[0].results) {
 
         const location = result.locations[0].physicalLocation;
+        let startColumn = locataion.region.startColumn;
+        let endColumn = location.region.endColumn -1;  // https://docs.oasis-open.org/sarif/sarif/v2.0/csprd02/sarif-v2.0-csprd02.html#_Toc10127881
+        
+        if (startColumn > endColumn) {
+            startColumn = endColumn;
+        }
 
         // Transform into Sonar's format 
         const issue = {
@@ -29,7 +35,7 @@ try {
                     startLine: location.region.startLine, 
                     endLine: location.region.endLine, 
                     startColumn: location.region.startColumn, 
-                    endColumn: location.region.endColumn-1  // https://docs.oasis-open.org/sarif/sarif/v2.0/csprd02/sarif-v2.0-csprd02.html#_Toc10127881
+                    endColumn: location.region.endColumn-1  
                 }
             }
         }

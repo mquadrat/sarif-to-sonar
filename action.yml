@@ -1,0 +1,12 @@
+name: 'SARIF to Sonar'
+description: 'Convert SARIF reports to Sonar issues'
+inputs:
+  sarif-file:  # id of input
+    description: 'Filename of the SARIF report'
+    required: true
+  sonar-file: 
+    description: 'Filename of the Sonar file'  
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'

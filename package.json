@@ -1,0 +1,23 @@
+{
+  "name": "sarif-to-sonar",
+  "version": "1.0.0",
+  "description": "GitHub action to convert SARIF reports to Sonar's proprietary import format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mquadrat/sarif-to-sonar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mquadrat/sarif-to-sonar/issues"
+  },
+  "homepage": "https://github.com/mquadrat/sarif-to-sonar#readme",
+  "dependencies": {
+    "@actions/core": "^1.3.0"
+  }
+}

@@ -29,7 +29,7 @@ try {
                     startLine: location.region.startLine, 
                     endLine: location.region.endLine, 
                     startColumn: location.region.startColumn, 
-                    endColumn: location.region.endColumn
+                    endColumn: location.region.endColumn-1  // https://docs.oasis-open.org/sarif/sarif/v2.0/csprd02/sarif-v2.0-csprd02.html#_Toc10127881
                 }
             }
         }

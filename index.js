@@ -18,8 +18,8 @@ try {
         let startColumn = location.region.startColumn -1;
         let endColumn = location.region.endColumn -1;  // https://docs.oasis-open.org/sarif/sarif/v2.0/csprd02/sarif-v2.0-csprd02.html#_Toc10127881
         
-        if (startColumn > endColumn) {
-            startColumn = endColumn;
+        if (startColumn >= endColumn) {
+            startColumn = endColumn-1;  // Start must be less than end 
         }
         if (startColumn < 0)  {
             startColumn = 0;
